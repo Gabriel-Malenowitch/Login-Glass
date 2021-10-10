@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.1s linear;
+}
+
+:root{
+    --glass-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.137);
+    --border-shadow-0: 10px;
+    --border-shadow-1: solid 1px transparent;
+    --border-shadow-2: rgba(255, 255, 255, 0.685) rgba(255, 255, 255, 0.342) rgba(78, 78, 78, 0.158) rgba(255, 255, 255, 0.774);
+    /* --bg-shadow: rgba(255, 255, 255, 0.171); */
+    --bg-shadow: rgba(250, 220, 220, 0.308);
+    --bg-shadow-hover: rgba(250, 231, 220, 0.349);
+    --title-color: #DDEDDD;
+}
+
+body{
+    /* background-image: linear-gradient(to right, 
+    #57B6FF, 
+    #e762d8,
+    #FFEF51); */
+    background: rgb(197, 107, 197);
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    width: 500px;
+    /* height: 400px; */
+    height: 30vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.glass{
+    border-radius: var(--border-shadow-0);
+    border: var(--border-shadow-1);
+    border-color: var(--border-shadow-2);
+    background: var(--bg-shadow);
+    box-shadow: var(--glass-shadow);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+#containerLogin{
+    width: 400px;
+    /* height: 400px; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    position: absolute;
+    z-index: 0;
+}
+.title{
+    color: var(--title-color);
+}
+.title-decoration{
+    height: inherit;
+    width: inherit;
+    padding-bottom: 4px;
+    border: solid 2px transparent;
+    border-bottom-color: var(--title-color);
+}
+.buttonGo{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 25%;
+    height: 35px;
+    border: solid 0px transparent;
+    border-radius: 20px;
+    background: var(--title-color);
+    font-weight: 900;
+    color: #444;
+}
+.buttonGo:hover{
+    background: rgba(222, 184, 135, 0.473);
+}
+.inputText{
+    font-weight: 600;
+    height: 50px;
+    width: 100%;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    outline: transparent;
+    padding: 15px;
+    display: block;
+    margin-top: 15px;
+}
+.inputText::placeholder{
+    color: rgba(238, 238, 238, 0.829);
+}
+.inputText:hover{
+    background: rgba(222, 184, 135, 0.137);
+}
+a{
+    /* text-decoration: none; */
+    color: var(--title-color);
+}
+a:hover{
+    color: white;
+}
+.option{
+    position: relative;
+    bottom: 0px;
+    color: var(--title-color);
+    margin-top: 15px;
+}
+.glassDown0{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 85%;
+    z-index: 1;
+}
+.glassDown1{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    left: 75%;
+    top: 90%;
+    z-index: -1;
+}
+.glassDown2{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 30%;
+    top: 110%;
+    z-index: 1;
+}
+.glassUp0{
+    width: 120px;
+    height: 120px;
+    z-index:-1;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+}
+.glassUp1{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 40%;
+}
+.glassDown{
+    animation: glassDown 2s infinite;
+    transition: all 0.5s linear;
+}
+.glassUp{
+    animation: glassUp 2s infinite;
+    transition: all 0.5s linear;
+}
+.myName{
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.thanks{
+    color: white;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: 300;
+}
+@media (min-width: 1000px) {
+    .glassDown:hover{
+        background: var(--bg-shadow-hover);
+        filter: blur(5px);
+    }
+    .glassUp:hover{
+        background: var(--bg-shadow-hover);
+        filter: blur(5px);
+    }
+}
+@media (max-width: 1000px) {
+    .container{
+        width: 400px;
+        /* height: 300px; */
+    }
+    #containerLogin{
+        width: 300px;
+        /* height: 300px; */
+    }
+    .buttonGo{
+        width: 30%;
+    }
+    .glassDown0{
+        width: 55px;
+        height: 55px;
+        left: 80%;
+    }
+    .glassDown1{
+        width: 75px;
+        height: 75px;
+    }
+    .glassDown2{
+        width: 85px;
+        height: 85px;
+        top: 120%;
+    }
+    .glassUp0{
+        width: 90px;
+        height: 90px;
+    }
+    .glassUp1{
+        width: 45px;
+        height: 45px;
+        margin-left: 5%;
+    }
+}
+@keyframes glassDown {
+    0%{
+        margin-top: -20%;
+    }
+    50%{
+        margin-top: 0%;
+    }
+    100%{
+        margin-top: -20%;
+    }
+}
+@keyframes glassUp {
+    0%{
+        margin-top: 20%;
+    }
+    50%{
+        margin-top: 0%;
+    }
+    100%{
+        margin-top: 20%;
+    }
+}
